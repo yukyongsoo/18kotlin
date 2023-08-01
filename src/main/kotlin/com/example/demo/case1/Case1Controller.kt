@@ -12,14 +12,10 @@ class Controller {
 
 
     @GetMapping
-    fun a(@Valid case1: Case1) {
-
-    }
+    fun a(@Valid case1: Case1) {}
 
     @PostMapping
-    fun b(@Valid @RequestBody case1: Case1) {
-
-    }
+    fun b(@Valid @RequestBody case1: Case1) {}
 }
 
 data class Case1(

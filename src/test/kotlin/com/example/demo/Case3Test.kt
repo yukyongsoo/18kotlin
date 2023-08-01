@@ -10,7 +10,6 @@ import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.junit.jupiter.MockitoExtension
 import org.mockito.kotlin.given
-import org.mockito.kotlin.willReturn
 import org.springframework.data.repository.findByIdOrNull
 
 @ExtendWith(MockitoExtension::class)
@@ -21,14 +20,17 @@ class Case3Test {
     @InjectMocks
     private lateinit var case3: Case3
 
+
     @Test
     fun case1() {
-        given {
+        given(
             repo.findByIdOrNull(anyInt())
-        }.willReturn {
+        ).willReturn(
             Enti("a")
-        }
+        )
 
         case3.a()
     }
+
+    //https://github.com/mockito/mockito/issues/1481
 }
