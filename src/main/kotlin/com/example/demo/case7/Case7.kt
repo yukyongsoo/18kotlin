@@ -1,12 +1,13 @@
 package com.example.demo.case7
 
-class Case7 {
-    private val int = 0
-    private val int2: Int? = null
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.RestController
 
-    fun a() {
-        var c = 0
-        //c = int + int2
-        println(c)
+@RestController
+class Case7 {
+    @GetMapping("/case7")
+    fun a(@RequestParam(required = false) string: String? = "a") {
+        println(string)
     }
 }
