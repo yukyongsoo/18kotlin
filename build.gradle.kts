@@ -39,9 +39,6 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.7.3")
 
-    implementation("org.springdoc:springdoc-openapi-kotlin:1.7.0")
-    implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
-
     runtimeOnly("com.h2database:h2")
 
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
