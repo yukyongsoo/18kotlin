@@ -15,7 +15,7 @@ class Case1Test {
     fun a() {
         webTestClient.get().uri {
             it.path("")
-            it.queryParam("a", "0")
+            it.queryParam("cantCheck", "0")
             it.build()
         }
             .exchange()
@@ -29,9 +29,7 @@ class Case1Test {
         webTestClient.post().uri {
             it.path("")
             it.build()
-        }.bodyValue(
-            case1
-        )
+        }.bodyValue(case1)
             .exchange()
             .expectStatus().isOk
     }

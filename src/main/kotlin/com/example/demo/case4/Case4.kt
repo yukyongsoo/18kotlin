@@ -1,16 +1,16 @@
 package com.example.demo.case4
 
-@Case4Anno
+@NoArg
 class Case4(
-    var a: String?
+    private var itWillBeC: String?
 ){
     init {
-        a = "C"
+        itWillBeC = "C"
     }
 
     fun print() {
-        println(a)
+        println(itWillBeC)
     }
 }
 
-annotation class Case4Anno
+annotation class NoArg

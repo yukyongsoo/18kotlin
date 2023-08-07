@@ -22,7 +22,7 @@ configurations {
 }
 
 noArg{
-    annotation("com.example.demo.case4.Case4Anno")
+    annotation("com.example.demo.case4.NoArg")
 }
 
 repositories {

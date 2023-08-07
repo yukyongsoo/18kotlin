@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test
 
 class Case8Test {
     @Test
-    fun a() {
+    fun getIWantGetter() {
         val case8 = Case8()
 
-        //case8.getA()
+        //case8.getIWantGetter()
     }
 }

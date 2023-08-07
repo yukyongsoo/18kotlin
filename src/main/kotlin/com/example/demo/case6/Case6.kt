@@ -18,7 +18,7 @@ value class Case6Property(
 )
 
 @Entity
-@IdClass(Case6Id::class)
+//@IdClass(Case6Id::class)
 class Case6Entity{
     @Id
     val id = Case6Id(1)

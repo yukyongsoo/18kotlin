@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class Controller {
+class Case1Controller {
 
 
     @GetMapping
-    fun a(@Valid case1: Case1) {}
+    fun get(@Valid case1: Case1) {}
 
     @PostMapping
-    fun b(@Valid @RequestBody case1: Case1) {}
+    fun post(@Valid @RequestBody case1: Case1) {}
 }
 
 data class Case1(
     @Size(min = 3)
-    val a: String
+    val cantCheck: String
 ) {
 //    @NotNull
-//    val b: String? = null
+//    val canCheck: String? = null
 }

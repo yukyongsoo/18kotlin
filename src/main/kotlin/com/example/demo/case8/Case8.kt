@@ -1,10 +1,10 @@
 package com.example.demo.case8
 
 class Case8 {
-    val a = ""
+    val iWantGetter = ""
 
-//    fun getA(): String {
-//        println(a)
-//        return a
+//    fun getIWantGetter(): String {
+//        println(iWantGetter)
+//        return iWantGetter
 //    }
 }

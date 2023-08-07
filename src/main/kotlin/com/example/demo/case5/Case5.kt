@@ -12,11 +12,11 @@ interface Repo2: JpaRepository<Enti, Int>
 
 @Entity(name = "case5")
 data class Enti(
-    private val b: String
+    private val parentString: String
 ){
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val a = 0
+    val id = 0
 
     @OneToMany(mappedBy = "parent")
     val list = listOf(
@@ -26,11 +26,11 @@ data class Enti(
 
 @Entity
 data class EntiChild(
-    private val b: String
+    private val childString: String
 ){
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val a = 0
+    val id = 0
 
     @ManyToOne
     val parent: Enti = Enti("a")

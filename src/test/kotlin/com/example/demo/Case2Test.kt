@@ -10,25 +10,28 @@ class Case2Test {
 
     @Test
     @Timeout(10, unit = TimeUnit.SECONDS)
-    fun a() {
-        case2.what()
+    fun iWillWait() {
+        case2.iWillWait()
     }
 
     @Test
     @Timeout(10, unit = TimeUnit.SECONDS)
-    fun b() {
-        case2.hmm()
+    fun iWontWait() {
+        case2.iWontWait()
     }
 
     @Test
     @Timeout(10, unit = TimeUnit.SECONDS)
-    fun c() {
-        case2.wtf()
+    fun okIWontWait() {
+        case2.okIWontWait()
     }
 
     @Test
     @Timeout(10, unit = TimeUnit.SECONDS)
-    fun d() {
-        case2.ok()
+    fun okIWillWait() {
+        case2.okIWillWait()
     }
 }
+
+
+//new coroutine and blocks the current thread interruptibly until its completion

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
 class Case3(
     private val repo: Repo
 ) {
-    fun a() {
+    fun findByIdOrNull() {
         repo.findByIdOrNull(1)
     }
 }
@@ -21,9 +21,9 @@ interface Repo: JpaRepository<Enti, Int>
 
 @Entity
 class Enti(
-    private val b: String
+    private val string: String
 ){
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val a = 0
+    val id = 0
 }

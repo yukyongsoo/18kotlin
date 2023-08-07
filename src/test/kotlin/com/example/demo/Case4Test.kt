@@ -6,15 +6,16 @@ import kotlin.reflect.full.createInstance
 
 class Case4Test {
     @Test
-    fun good() {
-        val a = Case4::class.createInstance()
-        a.print()
+    fun kotlinWay() {
+        val case4 = Case4::class.createInstance()
+        //val case4  = Case4::class.primaryConstructor!!.call("B")
+        case4.print()
     }
 
     @Test
-    fun wtf() {
+    fun javaWay() {
         val clazz = Class.forName("com.example.demo.case4.Case4")
-        val a = clazz.getDeclaredConstructor().newInstance() as Case4
-        a.print()
+        val case4 = clazz.getDeclaredConstructor().newInstance() as Case4
+        case4.print()
     }
 }

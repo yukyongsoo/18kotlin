@@ -29,7 +29,7 @@ class Case3Test {
             Enti("a")
         )
 
-        case3.a()
+        case3.findByIdOrNull()
     }
 
     //https://github.com/mockito/mockito/issues/1481

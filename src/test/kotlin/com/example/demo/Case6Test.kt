@@ -13,19 +13,19 @@ class Case6Test {
     private lateinit var repo3: Repo3
 
     @Test
-    fun a() {
+    fun findById() {
         val b = repo3.findById(Case6Id(1))
     }
 
     @Test
-    fun b() {
+    fun findAllByIdIn() {
         val b = repo3.findAllByIdIn(
             listOf(Case6Id(1))
         )
     }
 
     @Test
-    fun c() {
+    fun findAllByPropertyIn() {
         val c = repo3.findAllByPropertyIn(
             listOf(Case6Property("a"))
         )

@@ -11,7 +11,7 @@ class Case7Test {
     private lateinit var webTestClient: WebTestClient
 
     @Test
-    fun a() {
+    fun whatIsTheValue() {
         webTestClient.get().uri {
             it.path("/case7")
             it.build()

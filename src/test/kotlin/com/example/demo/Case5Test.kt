@@ -18,15 +18,15 @@ class Case5Test {
     private lateinit var repo2: Repo2
 
     @Test
-    fun a() {
+    fun wtf() {
         given {
             repo2.findById(anyInt())
         }.willReturn {
             Optional.of(Enti("a"))
         }
 
-        val a = repo2.findByIdOrNull(1)!!
+        val entity = repo2.findByIdOrNull(1)!!
 
-        println(a.hashCode())
+        println(entity.hashCode())
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class Case7 {
     @GetMapping("/case7")
-    fun a(@RequestParam(required = false) string: String? = "a") {
+    fun whatIsTheValue(@RequestParam(required = false) string: String? = "a") {
         println(string)
     }
 }

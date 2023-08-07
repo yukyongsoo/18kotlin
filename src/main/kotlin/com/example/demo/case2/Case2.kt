@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 class Case2 {
-    fun what() {
+    fun iWillWait() {
         runBlocking {
             launch {
                 delay(10_000)
@@ -18,7 +18,7 @@ class Case2 {
         }
     }
 
-    fun hmm() {
+    fun iWontWait() {
         runBlocking {
             async {
                 delay(10_000)
@@ -28,7 +28,7 @@ class Case2 {
         }
     }
 
-    fun ok() {
+    fun okIWontWait() {
         CoroutineScope(Dispatchers.IO).async {
             delay(10_000)
 
@@ -36,7 +36,7 @@ class Case2 {
         }
     }
 
-    fun wtf() {
+    fun okIWillWait() {
         CoroutineScope(Dispatchers.IO).launch {
             delay(10_000)
 
